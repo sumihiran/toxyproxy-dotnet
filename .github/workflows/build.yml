@@ -1,0 +1,38 @@
+name: Build
+
+env:
+  DOTNET_NOLOGO: true
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+  DOTNET_CLI_TELEMETRY_OPTOUT: true
+
+on:
+  push:
+    branches: [ develop, main, feature/*, bugfix/* ]
+  pull_request:
+    branches: [ develop, main ]
+
+jobs:
+  build:
+    name: "Build & Test"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: "Setup .NET SDK"
+        uses: actions/setup-dotnet@v3
+
+      - name: "Cache .nuke/temp, ~/.nuget/packages"
+        uses: actions/cache@v3
+        with:
+          path: |
+            .nuke/temp
+            ~/.nuget/packages
+          key: ${{ runner.os }}-${{ hashFiles('global.json', 'src/**/*.csproj') }}
+
+      - name: "Run Nuke"
+        run: ./build.cmd
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
