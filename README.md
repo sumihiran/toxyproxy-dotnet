@@ -1,10 +1,13 @@
-![Banner](Images/Banner.png)
+# Toxyproxy
 
-# Project Title
+[![CI/CD](https://github.com/sumihiran/toxyproxy-dotnet/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/sumihiran/toxyproxy-dotnet/actions/workflows/build.yml)
 
-[![ToxyProxy NuGet Package](https://img.shields.io/nuget/v/ToxyProxy.svg)](https://www.nuget.org/packages/ToxyProxy/) [![ToxyProxy NuGet Package Downloads](https://img.shields.io/nuget/dt/ToxyProxy)](https://www.nuget.org/packages/ToxyProxy) [![GitHub Actions Status](https://github.com/Username/Project/workflows/Build/badge.svg?branch=main)](https://github.com/Username/Project/actions)
+This is a .NET client library for Toxiproxy - a proxy designed to emulate network and system conditions. Toxiproxy serves as a proxy to evaluate your system by mimicking network disruptions.
 
-[![GitHub Actions Build History](https://buildstats.info/github/chart/Username/Project?branch=main&includeBuildsFromPullRequest=false)](https://github.com/Username/Project/actions)
+## Contributing
 
+See [CONTRIBUTING.md](CONTRIBUTING.md)
 
-Project Description
+## Authors
+
+* **Nuwan Sumihiran** - *Initial work* - [Sumihiran](https://github.com/sumihiran/)
