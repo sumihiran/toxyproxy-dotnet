@@ -1,0 +1,29 @@
+### List All Proxies
+GET http://localhost:8474/proxies
+Accept: application/json
+
+### Create a New Proxy
+POST http://localhost:8474/proxies
+Content-Type: application/json
+
+{
+    "name": "redis",
+    "listen": "localhost:6379",
+    "upstream": "redis:6379"
+}
+
+### Retrieve a Proxy
+GET http://localhost:8474/proxies/redis
+Accept: application/json
+
+### Update a Proxy
+POST http://localhost:8474/proxies/redis
+Content-Type: application/json
+
+{
+    "enabled": false
+}
+
+### Delete a Proxy
+DELETE http://localhost:8474/proxies/redis
+Accept: application/json

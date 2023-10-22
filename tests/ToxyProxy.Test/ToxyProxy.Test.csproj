@@ -1,11 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup Label="Build">
-        <TargetFramework>net6.0</TargetFramework>
-    </PropertyGroup>
+  <PropertyGroup Label="Build">
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>DotNet.ToxyProxy.Test</RootNamespace>
+  </PropertyGroup>
 
-    <ItemGroup Label="Project References">
-        <ProjectReference Include="..\..\src\ToxyProxy\ToxyProxy.csproj"/>
-    </ItemGroup>
+  <ItemGroup Label="Project References">
+    <ProjectReference Include="..\..\src\ToxyProxy\ToxyProxy.csproj"/>
+  </ItemGroup>
 
 </Project>
